@@ -1,0 +1,79 @@
+---
+title: "Introduction to Programming -- Hackathon (solution)"
+author: "Hugo Lhuillier"
+date: "06/04/2018"
+output: html_document
+---
+
+This `html` file only presents the tables and figures. The source codes are in the `R` files in this directory.
+
+For this to work, you need to put all the solution scripts, and the `data/` folder, in the directory where this file is located. 
+
+```{r}
+source("base.R")
+```
+
+# Table 2
+
+```{r}
+# load the function contained in tab1.R, and run it to produce the desired table
+source("tab1.R")
+doTab1(sample_B)
+```
+
+# Figure 1
+
+```{r}
+# load the function contained in fig1.R, and run it to produce the desired figure
+source("fig1.R")
+doFig1(sample_A)
+```
+
+# Figure 2
+
+```{r}
+# load the function contained in fig2.R, and run it to produce the desired figure
+source("fig2.R")
+# figure 2 uses sample A, excluding all the individuals that are not of working age
+doFig2(filter(sample_A, working_age == 1))
+```
+
+# Figure 4
+
+```{r}
+# load the function contained in fig4.R, and run it to produce the desired figure
+source("fig4.R")
+doFig4(sample_B)
+```
+
+# Figure 5
+
+```{r}
+# load the function contained in fig5.R, and run it to produce the desired figure
+source("fig5.R")
+doFig5(sample_B)
+```
+
+# Figure 7
+
+```{r}
+# load the function contained in fig7.R, and run it to produce the desired figure
+source("fig7.R")
+doFig7(sample_B)
+```
+
+# Figure 9
+
+```{r}
+# load the function contained in fig9.R, and run it to produce the desired figure
+source("fig9.R")
+doFig9(sample_C)
+```
+
+# Figure 15
+
+```{r}
+# load the function contained in fig15.R, and run it to produce the desired figure
+source("fig15.R")
+doFig15(sample_C)
+```

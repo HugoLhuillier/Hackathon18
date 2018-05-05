@@ -7,7 +7,7 @@ doFig1 <- function(data, toSave = F){
   # excluding all entries where either labor income or pre-tax income is missing.
   # note that we deflate both variables by dividing by the CPI
   fig1 <- data %>% 
-    group_by(year) %>% 
+    group_by(true_year) %>% 
     filter(!is.na(labor_income), !is.na(pre_tax_income)) %>%
     dplyr::summarize(salary_cps       = Hmisc::wtd.mean(labor_income, wgt), 
                      total_income_cps = Hmisc::wtd.mean(pre_tax_income, wgt), 
@@ -18,7 +18,7 @@ doFig1 <- function(data, toSave = F){
             total_income_cps = total_income_cps / cpi * 100)
   
   # load the NIPA data
-  fig1_temp <- read_csv("./data-to-be-merge/nipa_income.csv")
+  fig1_temp <- read_csv("./data/nipa_income.csv")
   # merge the two dataset based on true_year
   fig1 <- left_join(fig1, fig1_temp)
   

@@ -9,7 +9,7 @@ ggthemr('fresh')
 
 # set the working directory to where the data data is 
 # YOU NEED TO CHANGE THAT ON YOUR COMPUTER
-setwd("/Users/hugolhuillier/Desktop/hackaton/")
+# setwd("/Users/hugolhuillier/Desktop/hackaton/solution")
 
 # load the data (taking care of giving the correct data types for wgt, hhid, new_hrs and new_wage). also add the true year variable
 sample_A <- read_csv("data/sample_A.csv", 
