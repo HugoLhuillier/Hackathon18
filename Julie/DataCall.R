@@ -5,7 +5,7 @@ library(reldist)
 
 # nipa_income
 
-nipa <- read_csv("data-hackaton/nipa_income.csv", col_names = TRUE)
+nipa <- read_csv("data-hackaton/nipa_income.csv", col_names = TRUE, )
 
 
 # Sample A
